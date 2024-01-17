@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="para">
+ <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ipsa autem sunt iure dignissimos.
+     earum eos quo est veritatis illo sequi qui consectetur voluptas illum reprehenderit, harum, mollitia odit incidunt?
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi consequatur maiores quae debitis id tempore, facere doloribus
+     corporis consequuntur voluptate facilis quibusdam inventore itaque iure labore velit voluptates! Culpa, mollitia.</p>
+        </div>
+        <br>
+           <button id="btn" style="display: none;" onclick="show()">See More</button>
+           <br>
+           <!-- <button id="les" onclick="less()">Less more</button> -->
+<!--  style="display: none;" -->
+
+
+
+           <script>
+            var text = document.getElementById("para").innerText
+            console.log(text.length);
+            if (text.length > 100) {
+                var half = text.slice(0,90)
+                var again = (document.getElementById("para").innerText = half)
+                 var btn = (document.getElementById("btn").style.display="block")
+            }
+
+             function show() {
+               var btn = document.getElementById("btn")
+               var para = document.getElementById("para")
+               if (btn.innerText === "See More") {
+                para.innerText = text;
+                btn.innerText = "See Less"
+               } else{
+                var half = text.slice(0,90)
+                para.innerText = half
+                btn.innerText = "See More"
+
+               }
+             }
+              
+            
+           </script>
+            
+</body>
+</html>
